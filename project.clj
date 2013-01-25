@@ -1,4 +1,4 @@
-(defproject hlisp-flapjax "0.1.0-SNAPSHOT"
+(defproject hlisp-util "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://github.com/micha/hlisp-util"
   :license {:name "Eclipse Public License"
