@@ -42,5 +42,7 @@
 
 (defn localStorage-get
   [k]
-  (read-string (.getItem js/localStorage k)))
+  (let [v-str (.getItem js/localStorage k)]
+    (when-not (string/blank? v-str)
+      (read-string v-str))))
 
