@@ -1,4 +1,6 @@
 (ns hlisp.util
+  (:use
+    [cljs.reader    :only [read-string]])
   (:require
     [clojure.string   :as string]))
 
@@ -33,4 +35,12 @@
     (if (< i 0)
       "<< Sorry, there was an error computing the date. >>"
       (str (nth months (dec m)) " " d ", " y))))
+
+(defn localStorage-set!
+  [k v]
+  (.setItem js/localStorage k (pr-str v)))
+
+(defn localStorage-get
+  [k]
+  (read-string (.getItem js/localStorage k)))
 
